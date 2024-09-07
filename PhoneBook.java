@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class PhoneBook {
     ArrayList<String> db_names = new ArrayList<>();
     ArrayList<String> db_phone = new ArrayList<>();
-//    ArrayList<String> db_email = new ArrayList<>();
+    ArrayList<String> db_email = new ArrayList<>();
 
     PhoneBook(){}
 
@@ -15,10 +15,15 @@ public class PhoneBook {
     }
 
     // Створення контакта
+    void addContact(String name, String phone) {
+        db_names.add(name);
+        db_phone.add(phone);
+        db_email.add("");
+    }
     void addContact(String name, String phone, String email) {
         db_names.add(name);
         db_phone.add(phone);
-//        db_email.add(email);
+        db_email.add(email);
     }
 
     // Знаходження id контакта по імені, або телефону
@@ -39,5 +44,15 @@ public class PhoneBook {
         db_names.remove(contact_id);
         db_phone.remove(contact_id);
 //        db_email.remove(contact_id);
+    }
+
+    // Редагування імені контакта
+    void editContactName(int contact_id, String new_name) {
+        db_names.set(contact_id, new_name);
+    }
+
+    // Редагування телефона контакта
+    void editContactPhone(int contact_id, String new_phone) {
+        db_phone.set(contact_id, new_phone);
     }
 }
