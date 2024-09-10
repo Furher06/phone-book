@@ -31,3 +31,4 @@ replay_pid*
 /phone-book.iml
 /out/production/phone-book/.gitignore
 /out/production/phone-book/README.md
+/.idea/codeStyles/codeStyleConfig.xml
