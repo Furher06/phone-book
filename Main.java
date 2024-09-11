@@ -45,12 +45,12 @@ public class Main {
 				  case "2":
 					 System.out.println("Enter a new phone\n--> ");
 					 String newPhone = input.nextLine();
-					 pb.editContactName(pb.getId(contact), newPhone);
+					 pb.editContactPhone(pb.getId(contact), newPhone);
 					 break;
 				  case "3":
 					 System.out.println("Enter a new email\n--> ");
 					 String newEmail = input.nextLine();
-					 pb.editContactName(pb.getId(contact), newEmail);
+					 pb.editContactEmail(pb.getId(contact), newEmail);
 					 break;
 			   }
 			   break;
